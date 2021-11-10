@@ -1,8 +1,8 @@
-import logoImg from '../../assets/img/logo.svg'
+import logoImg from '../../assets/img/logo.svg';
 import {
     Container,
     Content
-} from './styles'
+} from './styles';
 
 type HeaderProps = {
  onOpenNewTransactionModal: () => void;   

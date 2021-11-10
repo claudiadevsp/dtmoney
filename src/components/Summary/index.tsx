@@ -1,9 +1,13 @@
+import { useContext } from 'react';
 import { Card, Container } from "./styles";
-import incomeImg from '../../assets/img/income.svg'
-import outcomeImg from '../../assets/img/outcome.svg'
-import totalImg from '../../assets/img/total.svg'
+import incomeImg from '../../assets/img/income.svg';
+import outcomeImg from '../../assets/img/outcome.svg';
+import totalImg from '../../assets/img/total.svg';
+import { TransactionsContext } from '../../TransactionsContext';
 
 export function Summary() {
+    const data = useContext(TransactionsContext);
+    console.log(data);
     return (
         <Container>
             <Card highlight="shape">

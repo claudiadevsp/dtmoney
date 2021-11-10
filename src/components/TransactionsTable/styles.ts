@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 type PropsTd = {
-    currency?: string;
+    type?: string;
 }
 
 export const Container = styled.div`
@@ -19,11 +19,12 @@ export const Th = styled.th`
     text-align: left;
     line-height: 1.5rem;
 `
+
 export const Td = styled.td<PropsTd>`
     padding: 1rem 2rem;
     border: 0;
     background: var(--shape);
-    color: var(--${props => props.currency});
+    color: ${(props) => props.type === 'deposit' ? '#33CC95' : props.type === 'withdraw' ? '#E52E4D' : ''};
     border-radius: 0.25rem;
     &:first-child {
       color: var(--text-title);
