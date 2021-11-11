@@ -10,7 +10,7 @@ export const Container = styled.div`
 
 export const Table = styled.table`
     width: 100%;
-    border-spacing: 0 0.5rem;
+    border-spacing: 0 0.5rem;    
 `
 export const Th = styled.th`
     color: var(--text-body);
@@ -18,9 +18,17 @@ export const Th = styled.th`
     padding: 1rem 2rem;
     text-align: left;
     line-height: 1.5rem;
+    @media(max-width: 794px) {
+        display: none;
+    }
 `
 
 export const Td = styled.td<PropsTd>`
+    @media(max-width: 794px) {
+        display: flex;
+        padding-bottom: 2px;     
+        
+    }
     padding: 1rem 2rem;
     border: 0;
     background: var(--shape);
